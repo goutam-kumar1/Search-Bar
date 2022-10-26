@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100px;
+        }
+        th,td{
+            border: 2px solid black;
+            text-align: center;
+            font-weight: 500px;
+            height: 40px;
+        }
+        
+        </style>
+</head>
+<body>
+        
+    <input  type="text" id="search" onkeyup="product()">
+    <table id="mytable">
+        <tr id="header">
+        <th>Product_ID</th>
+        <th>Product_Name</th>
+        <th>Product_Category</th>
+        <th>Product_Price</th></tr>
+        <tr>
+            <td>1</td>
+            <td>Samsung</td>
+            <td>Electronic</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Nokia</td>
+            <td>Electronic</td>
+            <td>5000</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>hp Laptop</td>
+            <td>Electronic</td>
+            <td>20000</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Dell Laptop</td>
+            <td>Electronic</td>
+            <td>450000</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Toshiba Laptop</td>
+            <td>Electronic</td>
+            <td>34500</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Iphone</td>
+            <td>Electronic</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Charger</td>
+            <td>Electronic</td>
+            <td>1200</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>LCD</td>
+            <td>Electronic</td>
+            <td>47000</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Powerbank</td>
+            <td>Electronic</td>
+            <td>1500</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Airpod</td>
+            <td>Electronic</td>
+            <td>2200</td>
+        </tr>
+    
+    
+    </table>
+
+
+    <script>
+        function product(){
+
+
+let info = document.getElementById("search").value.toUpperCase();
+
+
+let mytable = document.getElementById("mytable");
+
+let tr =  mytable.getElementsByTagName("tr");
+
+for(var i=0 ; i<tr.length ; i++)
+{
+    let 
+    td = tr[i].getElementsByTagName("td")[0,1];
+    if(td)
+    {
+        let textvalue = td.textContent || td.innerHTML;
+
+        
+
+        if(textvalue.toUpperCase().indexOf(info) >  -1)
+        {
+
+            tr[i].style.display="";
+        }
+        else{
+            tr[i].style.display="none";
+        }
+
+    }
+
+
+}
+
+}
+
+        
+    </script>
+</body>
+</html>
